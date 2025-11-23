@@ -208,7 +208,7 @@
         </div>
     </section>
 
-    <!-- 瀑布流作品展示 -->
+    <!-- 作品展示 -->
     <section id="gallery" class="py-16 w-full bg-gray-50 dark:bg-darkbg transition-colors duration-300">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-end mb-10">
@@ -319,7 +319,7 @@
                     <div class="ml-5">
                         <h3 class="text-lg font-bold text-gray-900 dark:text-white">侠士</h3>
                         <p class="text-xs text-primary font-bold uppercase tracking-wide mb-1">Photography</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">"漫社最可靠外援"</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">"漫社最强外援"</p>
                     </div>
                 </div>
             </div>
@@ -345,7 +345,6 @@
             });
         });
 
-        // 导航栏滚动效果
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             const isDark = document.documentElement.classList.contains('dark');
@@ -369,33 +368,43 @@
             }
         });
 
-        // 主题切换逻辑
         const themeToggleBtn = document.getElementById('theme-toggle');
         const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const mobileThemeIcon = document.getElementById('mobile-theme-icon');
         const htmlElement = document.documentElement;
 
-        function toggleTheme() {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.setItem('theme', 'light');
+        function updateIcons(isDark) {
+            if (isDark) {
+                if(themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+                if(mobileThemeIcon) mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
             } else {
-                htmlElement.classList.add('dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.setItem('theme', 'dark');
+                if(themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
+                if(mobileThemeIcon) mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
             }
         }
 
-        themeToggleBtn.addEventListener('click', toggleTheme);
-        mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+        function toggleTheme() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateIcons(false);
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateIcons(true);
+            }
+        }
+
+        if(themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+        if(mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+        if (htmlElement.classList.contains('dark')) {
+            updateIcons(true);
+        } else {
+            updateIcons(false);
+        }
         
     </script>
 </body>
 </html>
-
-
-
