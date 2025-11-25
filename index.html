@@ -45,7 +45,8 @@
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
-
+        
+        /* 模态框动画 */
         @keyframes modal-in {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
@@ -179,7 +180,7 @@
                 <div class="w-full h-px bg-gray-200 dark:bg-gray-700 mb-4"></div>
                 <div class="space-y-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     <p>
-                        “茶笙笙”小天使诞生于2017年，是 P.O.B 动漫社公认的“漫娘”。她不仅是一个可爱的形象，更代表着整个动漫社的文化传承与精神内核。
+                        “茶笙”小天使诞生于2017年，是 P.O.B 动漫社公认的“漫娘”。她不仅是一个可爱的形象，更代表着整个动漫社的文化传承与精神内核。
                     </p>
                     <p class="italic text-primary/80 dark:text-primary/60 mt-4">
                         “无论版本如何更迭，热爱永远不会毕业。”
@@ -242,15 +243,16 @@
                 <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">P.O.B 动漫社拥有完善的部门体系，无论你的天赋在哪里，都能找到发光发热的舞台。</p>
             </div>
 
-            <a href="https://asr258.github.io/P.O.B-unOfficial-site/Sub%20page/wota_gei.html" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="https://asr258.github.io/P.O.B-unOfficial-site/Sub%20page/cos.html" class="bg-white dark:bg-carddark rounded-xl p-6 hover:shadow-lg transition duration-300 border border-gray-100 dark:border-gray-700 group hover:-translate-y-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <a href="https://asr258.github.io/P.O.B-unOfficial-site/Sub%20page/cos.html" class="bg-white dark:bg-carddark rounded-xl p-6 hover:shadow-lg transition duration-300 border border-gray-100 dark:border-gray-700 group hover:-translate-y-1 block">
                     <div class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition duration-300 text-secondary dark:text-pink-300">
                         <i class="fa-solid fa-shirt text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-2 dark:text-white">Cosplay 部</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">不仅仅是穿上角色的衣服，更是注入角色的灵魂。</p>
                 </a>
-                
+
                 <a href="https://asr258.github.io/P.O.B-unOfficial-site/Sub%20page/wota_gei.html" class="bg-white dark:bg-carddark rounded-xl p-6 hover:shadow-lg transition duration-300 border border-gray-100 dark:border-gray-700 group hover:-translate-y-1 block">
                     <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition duration-300 text-primary dark:text-purple-300">
                         <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
@@ -264,7 +266,7 @@
                         <i class="fa-solid fa-camera-retro text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-2 dark:text-white">摄影部</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">五个大字。</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">定格每一个精彩瞬间，我们是社团的眼睛。</p>
                 </a>
 
                 <div class="bg-white dark:bg-carddark rounded-xl p-6 hover:shadow-lg transition duration-300 border border-gray-100 dark:border-gray-700 group hover:-translate-y-1">
@@ -272,7 +274,7 @@
                         <i class="fa-solid fa-guitar text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-2 dark:text-white">轻音部</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">你愿意......和我组一辈子的乐队吗？</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">如果不来玩乐队，那青春还有什么意义？</p>
                 </div>
 
                 <div class="bg-white dark:bg-carddark rounded-xl p-6 hover:shadow-lg transition duration-300 border border-gray-100 dark:border-gray-700 group hover:-translate-y-1">
@@ -288,7 +290,7 @@
                         <i class="fa-solid fa-gamepad text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-2 dark:text-white">游戏部</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">原来，你也玩____。</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">这里只有硬核玩家，没有菜鸟。</p>
                 </a>
 
                 <div class="bg-white dark:bg-carddark rounded-xl p-6 hover:shadow-lg transition duration-300 border border-gray-100 dark:border-gray-700 group hover:-translate-y-1">
@@ -306,7 +308,7 @@
                     <h3 class="text-lg font-bold mb-2 dark:text-white">偶像部</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm">既然要成为偶像，就为了笑容而努力吧！</p>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
@@ -425,8 +427,11 @@
 
         </div>
     </section>
+
     <div id="footer-placeholder"></div>
+
     <script src="load-footer.js"></script>
+
     <script>
         const modal = document.getElementById('mascot-modal');
         
