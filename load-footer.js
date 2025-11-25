@@ -1,14 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Footer loaded: v2025.11.23"); 
 
-    const footerContent = `
-    <!-- 主 Footer 区域 -->
-    <!-- 使用内联 style 强制指定背景色，防止暗色模式下背景消失 -->
-    <footer id="main-footer" class="text-white py-12 border-t border-gray-800 transition-colors duration-300 relative z-10" style="background-color: #1F2937;">
+    const footerContent = `    <footer id="main-footer" class="text-white py-12 border-t border-gray-800 transition-colors duration-300 relative z-10" style="background-color: #1F2937;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
                 
-                <!-- 左侧：Logo与简介 -->
                 <div class="text-center md:text-left">
                     <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
                         <span class="font-bold text-xl tracking-wider">武汉纺织大学 P.O.B 动漫社</span>
@@ -19,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     </p>
                 </div>
 
-                <!-- 中间：友情链接 -->
                 <div class="text-center">
                     <h4 class="text-lg font-bold mb-4">友情链接</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
@@ -27,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     </ul>
                 </div>
 
-                <!-- 右侧：关注我们 -->
                 <div class="text-center">
                     <h4 class="text-lg font-bold mb-4">关注我们</h4>
                     <div class="flex justify-center gap-4">
@@ -43,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-xs flex flex-col items-center gap-2">
                 <p>&copy; <span id="year">2025</span> 武汉纺织大学 P.O.B 动漫社. 操场别封烟了.</p>
-                
-                <!-- 提示小箭头 -->
+
                 <div id="scroll-hint" class="mt-4 animate-bounce cursor-pointer opacity-60 hover:opacity-100 transition-opacity p-2" onclick="window.toggleDeveloperSection()">
                     <span class="text-[10px] block mb-1">下滑或点击探索</span>
                     <i class="fa-solid fa-chevron-down text-gray-300 text-lg"></i>
@@ -53,12 +46,9 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </footer>
 
-    <!-- 隐藏的开发者区域 (二次滑动展开) -->
-    <!-- 背景色与 Footer 保持一致 -->
     <div id="developer-section" class="text-white overflow-hidden transition-all duration-700 ease-in-out max-h-0 border-t border-gray-800/50" style="background-color: #1F2937;">
         <div class="max-w-7xl mx-auto px-4 py-10 flex justify-center items-center min-h-[300px]">
-            
-            <!-- 开发者名片 -->
+
             <div class="developer-card relative w-full max-w-md p-6 rounded-2xl shadow-xl border border-white/10 
                         text-gray-900 dark:text-white
                         transform transition hover:scale-[1.02] duration-300"
@@ -86,20 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </p>
                     </div>
                 </div>
-
-                <!-- 装饰元素 -->
-                <div class="absolute top-4 right-4 opacity-10 dark:opacity-20 pointer-events-none">
-                    <i class="fa-solid fa-code text-6xl"></i>
-                </div>
                 
-                <!-- 收起按钮 -->
-                <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center relative z-10">
-                    <button onclick="window.toggleDeveloperSection()" class="text-xs text-gray-500 dark:text-gray-400 hover:text-blue-500 transition flex items-center justify-center gap-1 mx-auto w-full py-2 cursor-pointer">
-                        <i class="fa-solid fa-chevron-up"></i> 收起
-                    </button>
-                </div>
-            </div>
-
         </div>
     </div>
     `;
