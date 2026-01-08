@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <h3 class="text-xl font-bold truncate">䑟譱</h3>
                         <p class="text-sm text-blue-500 font-medium mb-2">网页开发人员</p>
                         <p class="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
-                            "我要转专业啊。"
+                            "微积分别挂求你了。"
                         </p>
                     </div>
                 </div>
@@ -153,4 +153,5 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("错误：找不到 footer-placeholder，请检查 HTML 文件中是否包含该 ID 的 div。");
     }
 });
+
 
