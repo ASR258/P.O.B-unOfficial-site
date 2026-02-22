@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h4 class="text-lg font-bold mb-4">友情链接</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="https://www.wtu.edu.cn/" target="_blank" class="hover:text-white transition">武汉纺织大学官网</a></li>
+                        <li><a href="https://qm.qq.com/q/f9mQZKqKHK" target="_blank" class="hover:text-white transition">电子露露卡粉丝群</a></li>
                     </ul>
                 </div>
 
