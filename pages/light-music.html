@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>轻音部 | P.O.B 动漫社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F59E0B',
+                        secondary: '#8B5CF6',
+                        darkbg: '#0F172A',
+                        carddark: '#1E293B',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-effect {
+            background: rgba(15, 23, 42, 0.90);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        ::selection {
+            background-color: #F59E0B;
+            color: #ffffff;
+        }
+        ::-moz-selection {
+            background-color: #F59E0B;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 transition-colors duration-300 dark:bg-darkbg dark:text-gray-200 w-full">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-effect shadow-sm top-0 left-0" id="navbar">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='../index.html'">
+                    <img src="https://github.com/ASR258/P.O.P-unOfficial-site/blob/main/resource/logo2.png?raw=true" alt="P.O.B Logo" class="h-10 w-auto">
+                    <span class="font-bold text-xl tracking-wider text-primary border-l-2 border-primary pl-2 ml-2">轻音部</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white font-medium transition flex items-center">
+                        <i class="fa-solid fa-house mr-1"></i> 返回首页
+                    </a>
+                    <a href="#intro" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white font-medium transition">部门简介</a>
+                    <a href="#coming" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white font-medium transition">更多内容</a>
+
+                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 focus:outline-none transition">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="mobile-theme-toggle" class="text-gray-600 dark:text-gray-300">
+                        <i class="fas fa-moon" id="mobile-theme-icon"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary dark:text-gray-300 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 absolute w-full left-0 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700">返回首页</a>
+                <a href="#intro" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700">部门简介</a>
+                <a href="#coming" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-700">更多内容</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-24 pb-14 w-full overflow-hidden bg-gray-900">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/25 to-secondary/20 mix-blend-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop" alt="Music Background" class="w-full h-full object-cover opacity-35">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-50 dark:from-darkbg to-transparent"></div>
+        </div>
+
+        <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1 mb-6 text-xs font-bold tracking-widest text-yellow-100 uppercase bg-primary/80 backdrop-blur-md rounded-full">
+                <i class="fa-solid fa-guitar"></i> P.O.B Light Music
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight drop-shadow-lg mb-4">把青春调成<span class="text-primary">和弦</span></h1>
+            <p class="text-gray-200 text-sm md:text-base max-w-2xl mx-auto">如果不来玩乐队，那青春还有什么意义？</p>
+        </div>
+    </section>
+
+    <section id="intro" class="py-16 w-full bg-white dark:bg-carddark transition-colors duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">关于轻音部</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">轻音部页面模板已创建，后续可在此填充成员、排练、演出与作品等内容。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center mb-4 text-primary">
+                        <i class="fa-solid fa-music text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">部门定位</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">以乐队为核心，欢迎吉他、贝斯、鼓、键盘、主唱及热爱音乐的同好。</p>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                        <i class="fa-solid fa-compact-disc text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">活动方向</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">排练合奏、活动舞台、校园演出，以及录音/混音等创作尝试。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coming" class="py-16 w-full bg-gray-50 dark:bg-darkbg transition-colors duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-carddark rounded-2xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm text-center">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">更多内容，敬请期待</h3>
+                <p class="text-gray-600 dark:text-gray-300">后续可添加：成员介绍、演出记录、曲目单、排练花絮、设备清单等模块。</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../scripts/load-footer.js"></script>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (!nav) return;
+
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                if (isDark) {
+                    nav.classList.remove('glass-effect');
+                    nav.classList.add('bg-gray-900/95');
+                } else {
+                    nav.classList.replace('glass-effect', 'bg-white/95');
+                }
+            } else {
+                nav.classList.remove('shadow-md');
+                if (isDark) {
+                    nav.classList.remove('bg-gray-900/95');
+                    nav.classList.add('glass-effect');
+                } else {
+                    nav.classList.replace('bg-white/95', 'glass-effect');
+                }
+            }
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+        const htmlElement = document.documentElement;
+
+        function updateIcons(isDark) {
+            if (isDark) {
+                if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+                if (mobileThemeIcon) mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                if (themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
+                if (mobileThemeIcon) mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
+        function toggleTheme() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateIcons(false);
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateIcons(true);
+            }
+        }
+
+        if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+        if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+        if (htmlElement.classList.contains('dark')) {
+            updateIcons(true);
+        } else {
+            updateIcons(false);
+        }
+    </script>
+</body>
+</html>
